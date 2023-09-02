@@ -7,6 +7,7 @@ const checkAuth=async (req,res,next)=>{
             console.log("si entreo al check")
             token=req.headers.authorization.split(" ")[1]
             const decoded=Jwt.verify(token,process.env.JWT_SECRET)
+            console.log("decode",decoded)
             req.veterinario = await Veterinario.findById(decoded.id).select(
                 "-password -token -confirmado"
             )
