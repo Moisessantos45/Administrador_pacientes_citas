@@ -11,10 +11,10 @@ const enviarToken = async (datos) => {
         email: "shigatsutranslations@gmail.com",
         name: `Usuario ${nombre}`
     };
-    
+
     try {
         const recivers = [{"email": email, "name": nombre}];
-
+    console.log("url",process.env.FRONTEDN_URL}/confirmar/token)
         const sendEmail = await apiInstance.sendTransacEmail({
             sender,
             to: recivers,
