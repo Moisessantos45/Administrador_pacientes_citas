@@ -1,7 +1,7 @@
 import SibApiV3Sdk from "sib-api-v3-sdk"
 
 const enviarToken = async (datos) => {
-    console.log("datos email", datos);
+    
     var defaultClient = SibApiV3Sdk.ApiClient.instance;
     var apiKey = defaultClient.authentications['api-key'];
     apiKey.apiKey = process.env.EMAIL_KEY;
@@ -11,7 +11,7 @@ const enviarToken = async (datos) => {
         email: "shigatsutranslations@gmail.com",
         name: `Usuario ${nombre}`
     };
-
+console.log("datos email", datos);
     try {
         const recivers = [{"email": email, "name": nombre}];
     console.log("url",process.env.FRONTEDN_URL/confirmar/token)
