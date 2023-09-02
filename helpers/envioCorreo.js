@@ -14,7 +14,7 @@ const enviarToken = async (datos) => {
 console.log("datos email", datos);
     try {
         const recivers = [{"email": email, "name": nombre}];
-    console.log("url",`process.env.FRONTEDN_URL/confirmar/${token}`)
+    console.log("url",`${process.env.FRONTEDN_URL}/confirmar/${token}`)
         const sendEmail = await apiInstance.sendTransacEmail({
             sender,
             to: recivers,
