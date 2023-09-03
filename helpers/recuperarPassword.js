@@ -23,7 +23,7 @@ const recuperarAcceso = async (datos) => {
             htmlContent:
                 `<p>Da click en el siguiente enelce para recueperarla.</p>
             <p>Para finalizar, simplemente haz clic en el siguiente enlace:
-            <a href="${process.env.FRONTEDN_URL}/confirmar/${token}">Confirmar</a>
+            <a href="${process.env.FRONTEDN_URL}/olvide-password/${token}">Confirmar</a>
             </p>`
         });
 
