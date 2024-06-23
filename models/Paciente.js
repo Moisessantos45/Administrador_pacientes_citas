@@ -1,36 +1,38 @@
 import mongoose from "mongoose";
 
-const PacientesShema=mongoose.Schema({
-    nombre:{
-        type: String,
-        required:true
+const PacientesShema = mongoose.Schema(
+  {
+    nombre: {
+      type: String,
+      required: true,
     },
-    propietario:{
-        type: String,
-        required:true
+    propietario: {
+      type: String,
+      required: true,
     },
-    email:{
-        type: String,
-        required:true
+    email: {
+      type: String,
+      required: true,
     },
-    fecha:{
-        type: Date,
-        required:true,
-        default:Date.now()
+    fecha: {
+      type: Date,
+      required: true,
+      default: Date.now(),
     },
-    sintomas:{
-        type: String,
-        required:true
+    sintomas: {
+      type: String,
+      required: true,
     },
-    veterinario:{
-        type: mongoose.Schema.Types.ObjectId,
-        ref:"Veterinario"
-    }
-},
-{
-    timestamps:true
-})
+    veterinario: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Veterinario",
+    },
+  },
+  {
+    timestamps: true,
+  }
+);
 
-const Paciente=mongoose.model("Paciente",PacientesShema)
+const Paciente = mongoose.model("Paciente", PacientesShema);
 
 export default Paciente;
